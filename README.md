@@ -48,25 +48,37 @@ My solution to this problem is to make it as composable(divisible into easily un
 
 I have gone in depth more in my proposal.pdf file located in the root directory of this GitHub repository.
 
-1. Limit the scope of PCI DSS Compliance/assessment.
-My recommendation is that Amazin Inc outsources the storage and processing of their customer's card data as well as the tokenization process to another company such as a payment aggregator or payment gateway, of which there are numerous(they include Stripe, Square, Razorpay, Instamojo, CCAvenue, among others)or even that they use a dedicated merchant account.
+Generally:
+
+1. _Limit the scope of PCI DSS Compliance/assessment._
+
+   My recommendation is that Amazin Inc outsources the storage and processing of their customer's card data as well as the tokenization process to another company such as a payment aggregator or payment gateway, of which there are numerous(they include Stripe, Square, Razorpay, Instamojo, CCAvenue, among others)or even that they use a dedicated merchant account.
 
    Network Segementation with Amazon VPCs and security groups is necessary to ensure that the scope of PCI compliance is small. This is important to ensure other infrastructure is not put into scope.
 
-2. Amazin Inc as a startup can use various open source tools as well as proprietary AWS tools to meet compliance requirements. These include: 
+2. Firewalls and VPNs.
+3. Protect and restrict user (system admins or anyone else with access) accounts and scope.
+4. Use and update Antivirus.
+5. Logging (e.g logging any change in the infrastructure and code landscapes).
+6. File system Integrity and Intrusion detection systems.
+
+
+Amazin Inc as a startup can use various open source tools as well as proprietary AWS tools to meet compliance requirements. These include: 
 > i. Using Terraform and Packer to build immutable infrastructure so that we never make changes to running production instances.
 
-> ii. Using OpenVPN, OpenLDAP and Duo Security(a 3rd party multi-factor authentication tool) to provide a secure path to running AWS EC2 instances(which have the client payment processing apps), offer secure passwords, history of login attempts, user control, and multi-factor authentication.
+> ii. Protect AWS IAM accounts and apply multifactor auth(MFA). Never use root AWS account
 
-> iii. Using OSSEC or Samhain for file integrity and host-based Intrusion detection(IDS).
+> iii. Using OpenVPN, OpenLDAP and Duo Security(a 3rd party MFA tool) to provide a secure path to running AWS EC2 instances(which have the client payment processing apps), offer secure passwords, history of login attempts, user control, and multi-factor authentication.
 
-> iv. Using Snort for network-based IDS.
+> iv. Using OSSEC or Samhain for file integrity and host-based Intrusion detection(IDS).
 
-> v. Using Clam-AV antivirus
+> v. Using Snort for network-based IDS.
 
-> vi. Amazon AWS CloudWatch for centralized logging.
+> vi. Using Clam-AV antivirus
 
-> vii. AWS KMS to protect and rotate any keys used by our instances.
+> vii. Amazon AWS CloudWatch for centralized logging.
 
+> viii. AWS KMS to protect and rotate any keys used by our instances.
 
+> 
 

@@ -36,3 +36,31 @@ PCI DSS divides these 6 milestones into 12 requirements to achieve the milestone
 
 The above represents all the important aspects of PCI DSS but it is important to note that each requirement has sub-requirements to it. Read [PCI DSS](https://www.pcisecuritystandards.org/document_library) and on Wikipedia [PCI DSS Wiki](https://en.wikipedia.org/wiki/PCI_DSS).
 
+
+# MY SOLUTION FOR AMAZIN:
+
+## Problem:
+
+A company, Amazin wants to set up an ecommerce platform that accepts users' credit card info.
+My solution to this problem is to make it as composable(divisible into easily understood concepts) as possible.
+
+## Solution:
+
+I have gone in depth more in my proposal.pdf file located in the root directory of this GitHub repository.
+
+1. Limit the scope of PCI DSS Compliance/assessment.
+My recommendation is that Amazin Inc outsources the storage and processing of their customer's card data as well as the tokenization process to another company such as a payment aggregator or payment gateway, of which there are numerous(they include Stripe, Square, Razorpay, Instamojo, CCAvenue, among others)or even that they use a dedicated merchant account.
+
+Network Segementation with Amazon VPCs and security groups is necessary to ensure that the scope of PCI compliance is small. This is important to ensure other infrastructure is not put into scope.
+
+2. Amazin Inc as a startup can use various open source tools as well as proprietary AWS tools to meet compliance requirements. These include: 
+> i. Using Terraform and Packer to build immutable infrastructure so that we never make changes to running production instances.
+> ii. Using OpenVPN, OpenLDAP and Duo Security(a 3rd party multi-factor authentication tool) to provide a secure path to running AWS EC2 instances(which have the client payment processing apps), offer secure passwords, history of login attempts, user control, and multi-factor authentication.
+> iii. Using OSSEC or Samhain for file integrity and host-based Intrusion detection(IDS).
+> iv. Using Snort for network-based IDS.
+> v. Using Clam-AV antivirus
+> vi. Amazon AWS CloudWatch for centralized logging.
+> vii. AWS KMS to protect and rotate any keys used by our instances.
+
+
+

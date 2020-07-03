@@ -2,7 +2,9 @@ AMAZIN INC PCI DSS COMPLIANT INFRASTRUCTURE
 ---
 ---
 
+
 ## What is PCI DSS?
+![PCI DSS](/images/pci-logo.jpeg)
 It is abundantly clear that the world has made great strides in regards to both the increasing use of technology such as online payments on ecommerce platforms, and data and in relation to data privacy and protection regulations. Data privacy and data security go hand in hand(or glove) and are complementary and both necessary today.
 
 _PCI DSS_ is an acronym for Payment Card Industry Data Security Standard. This is a standard (not a law) set up by competing payment processors such as VISA, Mastercard, AMEX and Discover to control or mitigate risks associated with merchants accepting sensitive cardholder data in their systems and to ensure these businesses maitain safe processes that safeguard cardholder data.

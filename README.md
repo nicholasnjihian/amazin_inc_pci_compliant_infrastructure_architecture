@@ -71,17 +71,17 @@ Amazin Inc as a startup can use various open source tools as well as proprietary
 
 > ii. Protect AWS IAM accounts and apply multifactor auth(MFA). Never use root AWS account
 
-> iii. Using OpenVPN, OpenLDAP and Duo Security(a 3rd party MFA tool) to provide a secure path to running AWS EC2 instances(which have the client payment processing apps), offer secure passwords, history of login attempts, user control, and multi-factor authentication.
+> iii. Using OpenVPN, OpenLDAP and a multifactor authentication tool like PAM or Duo Security (both are excellent) to provide a secure path to running AWS EC2 instances(which have the client payment processing apps), offer secure passwords, history of login attempts, user control, and multi-factor authentication.
 
-> iv. Using OSSEC or Samhain for file integrity and host-based Intrusion detection(IDS).
+> iv. Using OSSEC, md5deep or Samhain for file integrity and host-based Intrusion detection(IDS).
 
 > v. Using Snort for network-based IDS.
 
-> vi. Using Clam-AV antivirus
+> vi. Using Clam-AV antivirus as well Rootkit Hunter and LMD for detection and mitigation of viruses, rootkits and malware. 
 
-> vii. Amazon AWS CloudWatch for centralized logging.
+> vii. Amazon AWS CloudWatch for centralized logging. Amazon CloudWatch is feature-rich as it has Amazon CloudWatch Logs, Amazon CloudWatch Events and Amazon CloudWatch Alarms. However, it has to be paired with Amazon CloudTrails which monitors API calls/changes and also Amazon Config which monitors configuration changes and API activity as well. For fine-grained monitoring we also have Nagios. There are multiple great tools nowadays but these are the ones I have chosen. 
 
-> viii. AWS KMS to protect and rotate any keys used by our instances.
+> viii. AWS KMS to protect and rotate any keys used by our instances. These include SSL keys.
 
 ---
 ## LOGICAL DIAGRAMS OF ARCHITECTURE:

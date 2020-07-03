@@ -83,5 +83,23 @@ Amazin Inc as a startup can use various open source tools as well as proprietary
 
 > viii. AWS KMS to protect and rotate any keys used by our instances.
 
-> 
+---
+## LOGICAL DIAGRAMS OF ARCHITECTURE:
+
+![Overall Arch](/images/Subnets.png)
+
+
+## VPC1:
+
+![VPIC1](/images/VPC1_Prod_Server.png)
+
+
+## VPC2:
+
+![VPC2](/images/monitoring_metrics.png)
+
+## VPC3:
+
+![VPC3](/images/vpc3.png)
+
 

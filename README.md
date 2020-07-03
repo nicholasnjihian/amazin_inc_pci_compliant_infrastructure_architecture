@@ -89,16 +89,16 @@ Amazin Inc as a startup can use various open source tools as well as proprietary
 ![Overall Arch](/images/Subnets.png)
 
 
-## VPC1:
+## VPC1 (Production Instance with Web Application and server):
 
 ![VPIC1](/images/vpc1.png)
 
 
-## VPC2:
+## VPC2 (Centralized Logging and monitoring):
 
 ![VPC2](/images/monitoring_metrics.png)
 
-## VPC3:
+## VPC3 (Management tasks are done on this VPC as well as secondary monitoring by Nagios):
 
 ![VPC3](/images/vpc3.png)
 

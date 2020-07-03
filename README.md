@@ -91,7 +91,7 @@ Amazin Inc as a startup can use various open source tools as well as proprietary
 
 ## VPC1:
 
-![VPIC1](/images/VPC1_Prod_Server.png)
+![VPIC1](/images/vpc1.png)
 
 
 ## VPC2:

@@ -58,12 +58,12 @@ Generally:
    My recommendation is that Amazin Inc outsources the storage and processing of their customer's card data as well as the tokenization process to another company such as a payment aggregator or payment gateway, of which there are numerous(they include Stripe, Square, Razorpay, Instamojo, CCAvenue, among others)or even that they use a dedicated merchant account.
 
    Network Segementation with Amazon VPCs and security groups is necessary to ensure that the scope of PCI compliance is small. This is important to ensure other infrastructure is not put into scope.
-
-2. Firewalls and VPNs.
-3. Protect and restrict user (system admins or anyone else with access) accounts and scope.
-4. Use and update Antivirus.
-5. Logging (e.g logging any change in the infrastructure and code landscapes).
-6. File system Integrity and Intrusion detection systems.
+2. Elastic Load Balancing (ELB): ELB increases the speed of networked processes through distributing the requests to several servers. ELB also allows additional encryption layers for enhanced security.
+3. Firewalls and VPNs.
+4. Protect and restrict user (system admins or anyone else with access) accounts and scope.
+5. Use and update Antivirus.
+6. Logging (e.g logging any change in the infrastructure and code landscapes).
+7. File system Integrity and Intrusion detection systems.
 
 
 Amazin Inc as a startup can use various open source tools as well as proprietary AWS tools to meet compliance requirements. These include: 
